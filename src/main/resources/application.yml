@@ -1,0 +1,26 @@
+server:
+  port: 8080
+  context-path: /
+
+#用户定义属性
+cupSize: B
+age: 18
+
+spring:
+  profiles:
+    active: prod
+
+#数据源定义
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/dbgirl?useUnicode=true&characterEncoding=utf8&characterSetResults=utf8
+    username: root
+    password: 123456
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+
+
