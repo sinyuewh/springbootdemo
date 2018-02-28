@@ -13,10 +13,7 @@ public class GirlService {
     @Autowired
     private GirlReposity girlReposity;
 
-    /**
-     * 插入两个女生的数据
-     */
-    //@Transactional
+   //@Transactional
     public void InsertTwo()
     {
         Girl g1=new Girl();
@@ -28,5 +25,16 @@ public class GirlService {
         g2.setCupSize("GG");
         g2.setAge(44);
         this.girlReposity.save(g2);
+    }
+
+
+    /**
+     * 通过ID查询一个女生
+     * @param id
+     * @return
+     */
+    public Girl FindOne(Integer id)
+    {
+       return this.girlReposity.findOne(id);
     }
 }
